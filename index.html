@@ -1,115 +1,264 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moksha Online Hub – Official Exchange</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
-*{box-sizing:border-box}
-body{margin:0;font-family:'Poppins',sans-serif;background:#f6f1ea;color:#3b2a1a}
-.container{max-width:420px;margin:auto;padding:18px}
-.topbar{display:flex;gap:10px;margin-bottom:16px}
-.topbar a{flex:1;text-align:center;text-decoration:none;padding:12px;border-radius:14px;font-weight:600;font-size:.85rem;background:linear-gradient(135deg,#7a4a1d,#c9a24d);color:#fff;box-shadow:0 6px 18px rgba(122,74,29,.35)}
-.hero{text-align:center;padding:30px 18px;background:linear-gradient(180deg,#fff8ee,#f0e2c7);border-radius:20px;box-shadow:0 14px 40px rgba(90,60,20,.25)}
-.hero h1{font-family:'Playfair Display',serif;font-size:1.7rem;margin:12px 0;color:#4b2e13}
-.hero h2{font-size:.95rem;color:#6b4b2a;margin-bottom:18px}
-.badge{display:inline-block;background:#f3e5c6;color:#7a4a1d;padding:6px 14px;border-radius:999px;font-size:.75rem;margin-bottom:10px;border:1px solid #d6b46b}
-.btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;margin:12px 0;border-radius:16px;text-decoration:none;font-weight:600;font-size:.95rem}
-.btn-primary{background:linear-gradient(135deg,#8a5a2b,#d6b46b);color:#fff;box-shadow:0 10px 26px rgba(138,90,43,.4)}
-.btn-primary:hover{opacity:.95}
-.section{margin-top:24px}
-.card{background:linear-gradient(180deg,#fffaf2,#f2e6cf);border-radius:20px;padding:20px;margin-bottom:16px;border:1px solid #e0c892;box-shadow:0 10px 30px rgba(90,60,20,.2)}
-.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:12px;color:#4b2e13}
-.list{list-style:none;padding:0;margin:0}
-.list li{display:flex;align-items:center;gap:10px;margin:10px 0;font-size:.9rem;color:#5a3a1e}
-.list i{color:#9c6b30}
-.links a{display:flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(135deg,#fff6e5,#edd9b0);padding:14px;border-radius:16px;margin-bottom:12px;color:#4b2e13;font-size:.9rem;border:1px solid #d6b46b;box-shadow:0 6px 18px rgba(90,60,20,.2)}
-.links i{color:#8a5a2b;font-size:1.1rem}
-.disclaimer{margin-top:24px;font-size:.75rem;line-height:1.6;color:#6b4b2a;background:#fffaf2;padding:18px;border-radius:18px;border:1px solid #e0c892}
-footer{text-align:center;margin-top:18px;font-size:.7rem;color:#8b6a45}
-</style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
+    
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #1a1208, #0f0a05 70%);
+      color: #e8e8e8;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 18px;
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 42px 18px;
+      background: linear-gradient(180deg, #1a1208, #0f0a05);
+      border-radius: 22px;
+      border: 1px solid #3d2a12;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+      position: relative;
+    }
+    
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 12px 0;
+      color: #d4a017;
+      text-shadow: 0 2px 8px rgba(212,160,23,0.3);
+    }
+    
+    .hero h2 {
+      font-size: .95rem;
+      color: #b8860b;
+      margin-bottom: 18px;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #b8860b, #d4a017);
+      color: #000;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(212,160,23,0.25);
+    }
+    
+    .btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      margin: 12px 0;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, #b8860b, #d4a017);
+      color: #000;
+      box-shadow: 0 10px 25px rgba(212,160,23,0.35);
+    }
+    
+    .btn-primary:hover { transform: translateY(-2px); opacity: .95; }
+    
+    .btn-whatsapp {
+      background: linear-gradient(90deg, #25D366, #128C7E);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(37,211,102,0.35);
+    }
+    
+    .btn-whatsapp:hover { transform: translateY(-2px); }
+    
+    .btn-telegram {
+      background: linear-gradient(90deg, #2AABEE, #1E96D0);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(42,171,238,0.35);
+    }
+    
+    .btn-telegram:hover { transform: translateY(-2px); }
+    
+    .section { margin-top: 24px; }
+    
+    .card {
+      background: linear-gradient(180deg, #1a1208, #0f0a05);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 18px;
+      border: 1px solid #3d2a12;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+    
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      color: #d4a017;
+    }
+    
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      font-size: .9rem;
+      color: #b8860b;
+    }
+    
+    .list i {
+      color: #d4a017;
+    }
+    
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      background: linear-gradient(180deg, #1f160b, #161009);
+      padding: 14px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      color: #e8e8e8;
+      font-size: 0.9rem;
+      border: 1px solid #3d2a12;
+      transition: all 0.3s ease;
+    }
+    
+    .links a:hover {
+      background: linear-gradient(180deg, #2a1e10, #20180c);
+      transform: translateY(-2px);
+    }
+    
+    .links i {
+      color: #b8860b;
+      font-size: 1.1rem;
+    }
+    
+    .disclaimer {
+      margin-top: 24px;
+      font-size: .75rem;
+      line-height: 1.6;
+      color: #b8860b;
+      background: rgba(26,18,8,0.6);
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid #3d2a12;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 18px;
+      font-size: .7rem;
+      color: #8b6a45;
+    }
+  </style>
 </head>
 <body>
-  <div class="container"><section class="hero" style="box-shadow:0 20px 40px rgba(0,0,0,0.25); background: linear-gradient(180deg, #f2f2f2, #e6e6e6); color:#111;">
-  <div style="height:4px;width:60px;background:linear-gradient(90deg,#f5c542,#ffdf7e);border-radius:10px;margin:0 auto 12px;"></div>
-  <img src="moksha-logo.png" alt="Moksha Online Hub Logo" style="width:120px;max-width:45%;margin:0 auto 14px;display:block;" />
-  <div class="badge">🔥 HOT OFFER • LIMITED TIME</div>
-  <!-- Logo removed to avoid duplication -->
-  <div class="badge">Trusted • Fast • Automatic</div>
-  <h1>MOKSHA ONLINE HUB</h1>
-  <h2>India’s Trusted Online Exchange Platform</h2>
-  <a href="https://mokshaexch.com" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Instant Registration</a>
-  <a href="https://wa.me/message/IVXWRIAOLDMEL1" class="btn btn-whatsapp" style="box-shadow:0 10px 25px rgba(37,211,102,0.35);"><i class="fa-brands fa-whatsapp"></i> Get ID on WhatsApp</a>
-</section>
+  <div class="container">
+    <section class="hero">
+      <div style="height:4px;width:60px;background:linear-gradient(90deg,#d4a017,#b8860b);border-radius:10px;margin:0 auto 12px;"></div>
+      <img src="moksha-logo.png" alt="Moksha Online Hub Logo" style="width:120px;max-width:45%;margin:0 auto 14px;display:block;" />
+      <div class="badge">🔥 HOT OFFER • LIMITED TIME</div>
+      <div class="badge">Trusted • Fast • Automatic</div>
+      <h1>MOKSHA ONLINE HUB</h1>
+      <h2>India’s Trusted Online Exchange Platform</h2>
+      
+      <a href="https://mokshaexch.com" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Instant Registration</a>
+      <a href="https://wa.me/message/IVXWRIAOLDMEL1" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Get ID on WhatsApp</a>
+      <a href="https://t.me/Mokshaexchange" class="btn btn-telegram"><i class="fa-brands fa-telegram"></i> Official Telegram Channel</a>
+    </section>
 
-<section class="section">
-  <div class="card" style="box-shadow:0 12px 30px rgba(0,0,0,0.25);">
-    <h3><i class="fa-solid fa-chart-line"></i> Betting Markets</h3>
-    <ul class="list">
-      <li><i class="fa-solid fa-check"></i> Toss & Match Bets</li>
-      <li><i class="fa-solid fa-check"></i> Sessions & 500+ Fancy</li>
-      <li><i class="fa-solid fa-check"></i> Live In-Play Markets</li>
-    </ul>
-  </div>
-  <div class="card" style="box-shadow:0 12px 30px rgba(0,0,0,0.25);">
-    <h3><i class="fa-solid fa-shield-halved"></i> Platform Highlights</h3>
-    <ul class="list">
-      <li><i class="fa-solid fa-check"></i> Minimum ID ₹500 Only</li>
-      <li><i class="fa-solid fa-check"></i> 24×7 Lightning Fast Website</li>
-      <li><i class="fa-solid fa-check"></i> One‑Click Instant Cashout</li>
-      <li><i class="fa-solid fa-check"></i> No Documentation Required</li>
-    </ul>
-  </div>
-</section>
+    <section class="section">
+      <div class="card">
+        <h3><i class="fa-solid fa-chart-line"></i> Betting Markets</h3>
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i> Toss & Match Bets</li>
+          <li><i class="fa-solid fa-check"></i> Sessions & 500+ Fancy</li>
+          <li><i class="fa-solid fa-check"></i> Live In-Play Markets</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-shield-halved"></i> Platform Highlights</h3>
+        <ul class="list">
+          <li><i class="fa-solid fa-check"></i> Minimum ID ₹500 Only</li>
+          <li><i class="fa-solid fa-check"></i> 24×7 Lightning Fast Website</li>
+          <li><i class="fa-solid fa-check"></i> One‑Click Instant Cashout</li>
+          <li><i class="fa-solid fa-check"></i> No Documentation Required</li>
+        </ul>
+      </div>
+    </section>
 
-<section class="section">
-  <div class="card" style="box-shadow:0 12px 30px rgba(0,0,0,0.25);" style="border:2px solid #f5c542;">
-    <h3><i class="fa-solid fa-gift"></i> 100% Cashback Offer</h3>
-    <p style="font-size:0.9rem;line-height:1.6;">
-      Get <strong>100% Cashback</strong> on your first loss. This is a limited-time promotional offer for new users only.
-    </p>
-    <ul class="list">
-      <li><i class="fa-solid fa-circle-check"></i> Applicable on First Bet Only</li>
-      <li><i class="fa-solid fa-circle-check"></i> Cashback Credited as Bonus</li>
-      <li><i class="fa-solid fa-circle-check"></i> Fair Usage Policy Applies</li>
-    </ul>
-    <a href="#tutorial" class="btn btn-primary"><i class="fa-solid fa-play"></i> How to Claim – Video Guide</a>
-  </div>
-</section>
+    <section class="section">
+      <div class="card" style="border:2px solid #d4a017;">
+        <h3><i class="fa-solid fa-gift"></i> 100% Cashback Offer</h3>
+        <p style="font-size:0.9rem;line-height:1.6;">
+          Get <strong>100% Cashback</strong> on your first loss. This is a limited-time promotional offer for new users only.
+        </p>
+        <ul class="list">
+          <li><i class="fa-solid fa-circle-check"></i> Applicable on First Bet Only</li>
+          <li><i class="fa-solid fa-circle-check"></i> Cashback Credited as Bonus</li>
+          <li><i class="fa-solid fa-circle-check"></i> Fair Usage Policy Applies</li>
+        </ul>
+        <a href="#tutorial" class="btn btn-primary"><i class="fa-solid fa-play"></i> How to Claim – Video Guide</a>
+      </div>
+    </section>
 
-<section class="section" id="tutorial">
-  <div class="card" style="box-shadow:0 12px 30px rgba(0,0,0,0.25);">
-    <h3><i class="fa-solid fa-video"></i> How to Claim Cashback (Video Tutorial)</h3>
-    <p style="font-size:0.9rem;line-height:1.6;">
-      Watch the step-by-step tutorial below to understand how to register, place your first bet, and claim the 100% cashback offer correctly.
-    </p>
-    <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;">
-      <video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;background:#000;" poster="video-poster.jpg">
-        <source src="cashback-tutorial.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
+    <section class="section" id="tutorial">
+      <div class="card">
+        <h3><i class="fa-solid fa-video"></i> How to Claim Cashback (Video Tutorial)</h3>
+        <p style="font-size:0.9rem;line-height:1.6;">
+          Watch the step-by-step tutorial below to understand how to register, place your first bet, and claim the 100% cashback offer correctly.
+        </p>
+        <div style="position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;">
+          <video controls playsinline preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;background:#000;" poster="video-poster.jpg">
+            <source src="cashback-tutorial.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
 
-<section class="section links">
-  
-  <a href="https://wa.me/+13653870508"><i class="fa-brands fa-whatsapp"></i> Customer Support (24×7)</a>
-  <a href="https://t.me/Mokshaexc"><i class="fa-brands fa-telegram"></i> Payment Proofs</a>
-  <a href="https://t.me/Mokshaexchange"><i class="fa-solid fa-bullhorn"></i> Official Telegram Channel</a>
-  <a href="https://t.me/mokshaofficial"><i class="fa-solid fa-users"></i> Community Group</a>
-</section>
+    <section class="section links">
+      <a href="https://wa.me/+13653870508"><i class="fa-brands fa-whatsapp"></i> Customer Support (24×7)</a>
+      <a href="https://t.me/Mokshaexc"><i class="fa-brands fa-telegram"></i> Payment Proofs</a>
+      <a href="https://t.me/mokshaofficial"><i class="fa-solid fa-users"></i> Community Group</a>
+    </section>
 
-<section class="disclaimer">
-  <strong>Disclaimer & Age Restriction:</strong><br><br>
-  This platform is strictly for users aged <strong>18 years and above</strong>. Under‑18 users are not allowed to register or participate in any form. Online betting involves financial risk and may be addictive. Please play responsibly and only with funds you can afford to lose. Moksha Online Hub does not promote illegal activities and operates as an online exchange platform only.
-</section>
+    <section class="disclaimer">
+      <strong>Disclaimer & Age Restriction:</strong><br><br>
+      This platform is strictly for users aged <strong>18 years and above</strong>. Under‑18 users are not allowed to register or participate in any form. Online betting involves financial risk and may be addictive. Please play responsibly and only with funds you can afford to lose. Moksha Online Hub does not promote illegal activities and operates as an online exchange platform only.
+    </section>
 
-<footer>
-  © 2025 Moksha Online Hub • Play Responsibly
-</footer>
-
+    <footer>
+      © 2025 Moksha Online Hub • Play Responsibly
+    </footer>
   </div>
 </body>
 </html>
