@@ -5,28 +5,29 @@
   <title>Moksha Online Hub – Official Exchange</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
 *{box-sizing:border-box}
-body{margin:0;font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:#f7f9fc;color:#1f2937}
+body{margin:0;font-family:'Poppins',sans-serif;background:#f6f1ea;color:#3b2a1a}
 .container{max-width:420px;margin:auto;padding:18px}
-.hero{text-align:center;padding:32px 16px;background:#ffffff;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-.hero h1{font-size:1.6rem;margin:10px 0;color:#0f172a}
-.hero h2{font-size:.95rem;font-weight:400;color:#475569;margin-bottom:20px}
-.badge{display:inline-block;background:#eef2ff;color:#3730a3;padding:6px 12px;border-radius:999px;font-size:.75rem;margin-bottom:10px}
-.btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;margin:10px 0;border-radius:14px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid transparent}
-.btn-primary{background:#2563eb;color:#fff;box-shadow:0 8px 18px rgba(37,99,235,.25)}
-.btn-primary:hover{background:#1d4ed8}
-.btn-whatsapp{background:#10b981;color:#fff;box-shadow:0 8px 18px rgba(16,185,129,.25)}
+.topbar{display:flex;gap:10px;margin-bottom:16px}
+.topbar a{flex:1;text-align:center;text-decoration:none;padding:12px;border-radius:14px;font-weight:600;font-size:.85rem;background:linear-gradient(135deg,#7a4a1d,#c9a24d);color:#fff;box-shadow:0 6px 18px rgba(122,74,29,.35)}
+.hero{text-align:center;padding:30px 18px;background:linear-gradient(180deg,#fff8ee,#f0e2c7);border-radius:20px;box-shadow:0 14px 40px rgba(90,60,20,.25)}
+.hero h1{font-family:'Playfair Display',serif;font-size:1.7rem;margin:12px 0;color:#4b2e13}
+.hero h2{font-size:.95rem;color:#6b4b2a;margin-bottom:18px}
+.badge{display:inline-block;background:#f3e5c6;color:#7a4a1d;padding:6px 14px;border-radius:999px;font-size:.75rem;margin-bottom:10px;border:1px solid #d6b46b}
+.btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;margin:12px 0;border-radius:16px;text-decoration:none;font-weight:600;font-size:.95rem}
+.btn-primary{background:linear-gradient(135deg,#8a5a2b,#d6b46b);color:#fff;box-shadow:0 10px 26px rgba(138,90,43,.4)}
+.btn-primary:hover{opacity:.95}
 .section{margin-top:24px}
-.card{background:#ffffff;border-radius:18px;padding:18px;margin-bottom:16px;border:1px solid #e5e7eb;box-shadow:0 6px 20px rgba(0,0,0,.06)}
-.card h3{font-size:1rem;margin-bottom:10px;color:#0f172a}
+.card{background:linear-gradient(180deg,#fffaf2,#f2e6cf);border-radius:20px;padding:20px;margin-bottom:16px;border:1px solid #e0c892;box-shadow:0 10px 30px rgba(90,60,20,.2)}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:12px;color:#4b2e13}
 .list{list-style:none;padding:0;margin:0}
-.list li{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:.9rem;color:#334155}
-.list i{color:#2563eb}
-.links a{display:flex;align-items:center;gap:10px;text-decoration:none;background:#ffffff;padding:14px;border-radius:14px;margin-bottom:10px;color:#0f172a;font-size:.9rem;border:1px solid #e5e7eb;box-shadow:0 4px 14px rgba(0,0,0,.05)}
-.links i{color:#2563eb;font-size:1.1rem}
-.disclaimer{margin-top:24px;font-size:.75rem;line-height:1.6;color:#64748b;background:#ffffff;padding:16px;border-radius:16px;border:1px solid #e5e7eb}
-footer{text-align:center;margin-top:16px;font-size:.7rem;color:#94a3b8}
+.list li{display:flex;align-items:center;gap:10px;margin:10px 0;font-size:.9rem;color:#5a3a1e}
+.list i{color:#9c6b30}
+.links a{display:flex;align-items:center;gap:10px;text-decoration:none;background:linear-gradient(135deg,#fff6e5,#edd9b0);padding:14px;border-radius:16px;margin-bottom:12px;color:#4b2e13;font-size:.9rem;border:1px solid #d6b46b;box-shadow:0 6px 18px rgba(90,60,20,.2)}
+.links i{color:#8a5a2b;font-size:1.1rem}
+.disclaimer{margin-top:24px;font-size:.75rem;line-height:1.6;color:#6b4b2a;background:#fffaf2;padding:18px;border-radius:18px;border:1px solid #e0c892}
+footer{text-align:center;margin-top:18px;font-size:.7rem;color:#8b6a45}
 </style>
 </head>
 <body>
